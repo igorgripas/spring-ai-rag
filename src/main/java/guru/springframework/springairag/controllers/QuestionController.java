@@ -2,6 +2,8 @@ package guru.springframework.springairag.controllers;
 
 import guru.springframework.springairag.model.Answer;
 import guru.springframework.springairag.model.Question;
+import guru.springframework.springairag.services.OpenAIService;
+import lombok.RequiredArgsConstructor;
 import guru.springframework.springairag.service.OpenAiService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,6 +21,4 @@ public class QuestionController {
     public Answer askQuestion(@RequestBody Question question) {
         return openAiService.getAnswer(question);
     }
-
-
 }
